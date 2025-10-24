@@ -47,11 +47,6 @@ table {
   border-collapse: collapse;
 }
 
-caption {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
 thead th {
   padding-bottom: 0.4rem;
 }
@@ -60,7 +55,7 @@ tr {
   height: 1.1rem;
 }
 
-td:not(.sr-hidden) {
+td {
   border-left: var(--solid-border);
   border-right: var(--solid-border);
 }

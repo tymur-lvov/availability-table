@@ -1,0 +1,140 @@
+:root {
+  --color0: hsl(0, 0%, 100%);
+  --color1: hsl(120, 95%, 90%);
+  --color2: hsl(120, 95%, 80%);
+  --color3: hsl(120, 95%, 65%);
+  --color4: hsl(120, 95%, 40%);
+  --color5: hsl(120, 95%, 25%);
+  --solid-border: 0.1rem solid black;
+  --dashed-border: 0.09rem dashed black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(150, 30%, 75%);
+  font-family: "Arial", sans-serif;
+  padding: 120px 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+thead th {
+  padding-bottom: 0.4rem;
+}
+
+tr {
+  height: 1.1rem;
+}
+
+td:not(.sr-hidden) {
+  border-left: var(--solid-border);
+  border-right: var(--solid-border);
+}
+
+tbody .sharp:first-child td {
+  border-top: var(--solid-border);
+}
+
+.time {
+  position: relative;
+  top: -1.1em;
+  padding: 0.4rem;
+  width: 4rem;
+  border: 0;
+}
+
+.sharp td {
+  border-bottom: var(--dashed-border);
+}
+
+.half td {
+  border-bottom: var(--solid-border);
+}
+
+.available-0 {
+  background-color: var(--color0);
+}
+
+.available-1 {
+  background-color: var(--color1);
+}
+
+.available-2 {
+  background-color: var(--color2);
+}
+
+.available-3 {
+  background-color: var(--color3);
+}
+
+.available-4 {
+  background-color: var(--color4);
+}
+
+.available-5 {
+  background-color: var(--color5);
+}
+
+#legend {
+  width: 18rem;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#legend-title {
+  margin-bottom: 0.3rem;
+}
+
+#legend span {
+  display: inline-block;
+  width: 5rem;
+  height: 2rem;
+}
+
+#legend-line {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#legend-gradient {
+  width: 100%;
+  height: 60%;
+  border: var(--solid-border);
+  background: linear-gradient(
+    90deg,
+    var(--color0) 0% 17%,
+    var(--color1) 17% 34%,
+    var(--color2) 34% 50%,
+    var(--color3) 50% 67%,
+    var(--color4) 67% 83%,
+    var(--color5) 83% 100%
+  );
+}
